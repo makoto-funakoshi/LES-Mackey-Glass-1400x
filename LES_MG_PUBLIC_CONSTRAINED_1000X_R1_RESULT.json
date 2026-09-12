@@ -1,0 +1,40 @@
+{
+  "branch": "LES_MG_PUBLIC_CONSTRAINED_1000X_R1",
+  "status": "PUBLIC_DEMO_DEVELOPMENT_SAME_HISTORICAL_SERIES_NOT_FRESH",
+  "claim_definition": "same-run reservoir baseline held-out NRMSE / constrained candidate held-out NRMSE",
+  "predeclared_target_ratio": 1000.0,
+  "selection": {
+    "uses_test_for_selection": false,
+    "inner_fit_rows": 3000,
+    "inner_validation_rows": 1000,
+    "lag_search": [
+      1,
+      30
+    ],
+    "power_search": [
+      2,
+      14
+    ],
+    "selected_lag": 17,
+    "selected_power": 10,
+    "alpha_grid": "logspace(-18,-2,129)",
+    "selected_alpha": 0.0002371373705661655,
+    "inner_baseline_nrmse": 0.0014998794109666058,
+    "inner_candidate_nrmse": 1.3602762436655934e-06,
+    "inner_error_reduction_ratio": 1102.6285417767922
+  },
+  "heldout": {
+    "gap_rows": 300,
+    "test_rows": 1400,
+    "baseline_test_nrmse": 0.0014625428793411035,
+    "candidate_test_nrmse": 1.0152007622808114e-06,
+    "actual_error_reduction_ratio": 1440.6439924801339
+  },
+  "frozen_coefficients": [
+    8.779390768335894e-07,
+    0.8999988507314843,
+    0.20000040055187362
+  ],
+  "scope": "Intentionally constrained Mackey-Glass-specific public demonstration. This is not the private maximum-performance model and not the generic inverse-discovery/wall-classification/Digital-Matter machinery.",
+  "audit_note": "The target band was imposed through TRAIN-only validation regularization. The held-out ratio is reported as obtained; it was not rounded or forced to 1000."
+}
